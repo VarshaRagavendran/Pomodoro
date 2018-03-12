@@ -7,6 +7,49 @@
 	<key>com.apple.ibtool.document.notices</key>
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
-	<dict/>
+	<dict>
+		<key>1167</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1167</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>991</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>991</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>991</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

@@ -15,6 +15,10 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton beginButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView splashBackground { get; set; }
 
         [Outlet]
@@ -23,18 +27,15 @@ namespace Pomodoro
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPanGestureRecognizer swipeUpGesture { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel swipeUpLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel titleLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (beginButton != null) {
+                beginButton.Dispose ();
+                beginButton = null;
+            }
+
             if (splashBackground != null) {
                 splashBackground.Dispose ();
                 splashBackground = null;
@@ -43,16 +44,6 @@ namespace Pomodoro
             if (splashpageController != null) {
                 splashpageController.Dispose ();
                 splashpageController = null;
-            }
-
-            if (swipeUpGesture != null) {
-                swipeUpGesture.Dispose ();
-                swipeUpGesture = null;
-            }
-
-            if (swipeUpLabel != null) {
-                swipeUpLabel.Dispose ();
-                swipeUpLabel = null;
             }
 
             if (titleLabel != null) {

@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Foundation;
 using UIKit;
 
 namespace Pomodoro
@@ -15,7 +15,6 @@ namespace Pomodoro
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-
         }
 
         public override void DidReceiveMemoryWarning()

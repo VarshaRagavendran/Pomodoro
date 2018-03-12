@@ -104,10 +104,6 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="splashPageController.cs" />
-    <Compile Include="splashPageController.designer.cs">
-      <DependentUpon>splashPageController.cs</DependentUpon>
-    </Compile>
     <Compile Include="timerController.cs" />
     <Compile Include="timerController.designer.cs">
       <DependentUpon>timerController.cs</DependentUpon>
