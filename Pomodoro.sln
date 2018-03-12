@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro", "Pomodoro\Pomodoro.csproj", "{45E13637-7AF0-4057-850C-18292B463D9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Release|iPhone.ActiveCfg = Release|iPhone
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Release|iPhone.Build.0 = Release|iPhone
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{45E13637-7AF0-4057-850C-18292B463D9C}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
