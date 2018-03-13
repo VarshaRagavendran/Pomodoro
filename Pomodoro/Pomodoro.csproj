@@ -108,6 +108,10 @@
     <Compile Include="timerController.designer.cs">
       <DependentUpon>timerController.cs</DependentUpon>
     </Compile>
+    <Compile Include="mainPageController.cs" />
+    <Compile Include="mainPageController.designer.cs">
+      <DependentUpon>mainPageController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />

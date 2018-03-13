@@ -21,6 +21,16 @@
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/10551-view-10552.nib/objects-11.0+.nib">
+      <LogicalName>Main.storyboardc/10551-view-10552.nib/objects-11.0+.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/10551-view-10552.nib/runtime.nib">
+      <LogicalName>Main.storyboardc/10551-view-10552.nib/runtime.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/1153-view-1154.nib/objects-11.0+.nib">
       <LogicalName>Main.storyboardc/1153-view-1154.nib/objects-11.0+.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -48,6 +58,16 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/UINavigationController-1054.nib/runtime.nib">
       <LogicalName>Main.storyboardc/UINavigationController-1054.nib/runtime.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/UIViewController-10551.nib/objects-11.0+.nib">
+      <LogicalName>Main.storyboardc/UIViewController-10551.nib/objects-11.0+.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc/UIViewController-10551.nib/runtime.nib">
+      <LogicalName>Main.storyboardc/UIViewController-10551.nib/runtime.nib</LogicalName>
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
