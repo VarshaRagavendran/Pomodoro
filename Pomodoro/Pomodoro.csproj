@@ -110,11 +110,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\splash.jpeg" />
     <BundleResource Include="Resources\splash3.jpeg" />
     <BundleResource Include="Resources\splash2.png" />
     <BundleResource Include="Resources\splash4.jpeg" />
     <BundleResource Include="Resources\splash5.jpeg" />
+    <BundleResource Include="Resources\splash1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

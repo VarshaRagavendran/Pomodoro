@@ -15,10 +15,6 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton beginButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView splashBackground { get; set; }
 
         [Outlet]
@@ -31,11 +27,6 @@ namespace Pomodoro
 
         void ReleaseDesignerOutlets ()
         {
-            if (beginButton != null) {
-                beginButton.Dispose ();
-                beginButton = null;
-            }
-
             if (splashBackground != null) {
                 splashBackground.Dispose ();
                 splashBackground = null;
