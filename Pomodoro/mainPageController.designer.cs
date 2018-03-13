@@ -14,5 +14,8 @@ namespace Pomodoro
     [Register ("mainPageController")]
     partial class mainPageController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

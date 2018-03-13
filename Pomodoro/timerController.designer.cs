@@ -16,10 +16,6 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton addTaskButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton startButton { get; set; }
 
         [Outlet]
@@ -32,23 +28,10 @@ namespace Pomodoro
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel taskLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField taskTextField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel timeLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (addTaskButton != null) {
-                addTaskButton.Dispose ();
-                addTaskButton = null;
-            }
-
             if (startButton != null) {
                 startButton.Dispose ();
                 startButton = null;
@@ -62,16 +45,6 @@ namespace Pomodoro
             if (tableOfTasks != null) {
                 tableOfTasks.Dispose ();
                 tableOfTasks = null;
-            }
-
-            if (taskLabel != null) {
-                taskLabel.Dispose ();
-                taskLabel = null;
-            }
-
-            if (taskTextField != null) {
-                taskTextField.Dispose ();
-                taskTextField = null;
             }
 
             if (timeLabel != null) {

@@ -112,6 +112,18 @@
     <Compile Include="mainPageController.designer.cs">
       <DependentUpon>mainPageController.cs</DependentUpon>
     </Compile>
+    <Compile Include="notesController.cs" />
+    <Compile Include="notesController.designer.cs">
+      <DependentUpon>notesController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tasksController.cs" />
+    <Compile Include="tasksController.designer.cs">
+      <DependentUpon>tasksController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settingsController.cs" />
+    <Compile Include="settingsController.designer.cs">
+      <DependentUpon>settingsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />
