@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UIKit;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace Pomodoro
 {
@@ -71,7 +72,17 @@ namespace Pomodoro
             {
                 var cell = tableView.DequeueReusableCell(notesController.notesHistoryCellId);
                 int row = indexPath.Row;
-                cell.TextLabel.Text = controller.notesService.Items[indexPath.Row].Text;
+                string itemText = controller.notesService.Items[indexPath.Row].Text;
+                if (itemText.Length < 10)
+                    cell.TextLabel.Text = itemText;
+                else
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append(itemText.Substring(0, 10));
+                    sb.Append("...");
+                    cell.TextLabel.Text = sb.ToString();
+                }
+                    
                 return cell;
             }
 
