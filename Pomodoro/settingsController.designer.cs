@@ -14,5 +14,8 @@ namespace Pomodoro
     [Register ("settingsController")]
     partial class settingsController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

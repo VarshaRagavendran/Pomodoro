@@ -124,13 +124,17 @@
     <Compile Include="settingsController.designer.cs">
       <DependentUpon>settingsController.cs</DependentUpon>
     </Compile>
+    <Compile Include="enterNotesController.cs" />
+    <Compile Include="enterNotesController.designer.cs">
+      <DependentUpon>enterNotesController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />
-    <BundleResource Include="Resources\splash2.png" />
     <BundleResource Include="Resources\splash4.jpeg" />
     <BundleResource Include="Resources\splash5.jpeg" />
     <BundleResource Include="Resources\splash1.jpeg" />
+    <BundleResource Include="Resources\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

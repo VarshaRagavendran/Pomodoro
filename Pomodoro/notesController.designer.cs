@@ -14,5 +14,16 @@ namespace Pomodoro
     [Register ("notesController")]
     partial class notesController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView listOfAllNotesTable { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (listOfAllNotesTable != null) {
+                listOfAllNotesTable.Dispose ();
+                listOfAllNotesTable = null;
+            }
+        }
     }
 }

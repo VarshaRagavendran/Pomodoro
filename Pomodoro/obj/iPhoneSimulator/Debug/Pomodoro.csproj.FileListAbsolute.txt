@@ -5,8 +5,8 @@
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/actool/_BundleResourceWithLogicalName.items
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/coremlc/_PartialAppManifest.items
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/coremlc/_BundleResourceWithLogicalName.items
-/Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/optimized/splash2.png
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/optimized/
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/Pomodoro.csproj.CoreCompileInputs.cache
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/Pomodoro.exe
 /Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/Pomodoro.pdb
+/Users/Varsha/Projects/Pomodoro/Pomodoro/obj/iPhoneSimulator/Debug/device-builds/iphone7.2-11.2/optimized/home.png

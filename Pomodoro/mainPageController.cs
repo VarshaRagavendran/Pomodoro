@@ -14,5 +14,9 @@ namespace Pomodoro
            // this.NavigationItem.SetHidesBackButton (true, false);
             this.NavigationController.SetNavigationBarHidden(true, false);
         }
+
+        [Action("UnwindToMainPageController:")]
+        public void UnwindToMainPageController(UIStoryboardSegue seguq)
+        { }
     }
 }

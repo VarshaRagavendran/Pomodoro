@@ -173,6 +173,123 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>12006</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>12006</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>12033</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>12033</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font before iOS 10.0</string>
+				<key>type</key>
+				<string>IBAttributeUnavailable</string>
+				<key>type-value</key>
+				<integer>5</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>12033</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>12870</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>12870</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>13541</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>13541</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>14321</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>14321</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>14405</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>14405</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>14503</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>14503</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
 		<key>991</key>
 		<array>
 			<dict>
