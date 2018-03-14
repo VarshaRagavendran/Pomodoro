@@ -16,6 +16,10 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton doneNotesButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel notesLabel { get; set; }
 
         [Outlet]
@@ -24,6 +28,11 @@ namespace Pomodoro
 
         void ReleaseDesignerOutlets ()
         {
+            if (doneNotesButton != null) {
+                doneNotesButton.Dispose ();
+                doneNotesButton = null;
+            }
+
             if (notesLabel != null) {
                 notesLabel.Dispose ();
                 notesLabel = null;

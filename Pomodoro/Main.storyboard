@@ -297,6 +297,7 @@
                     </view>
                     <connections>
                         <outlet property="listOfAllNotesTable" destination="12005" id="name-outlet-12005"/>
+                        <outlet property="addNotesButton" destination="12008" id="name-outlet-12008"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11132" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -455,6 +456,7 @@
                     <connections>
                         <outlet property="notesTextArea" destination="12034" id="name-outlet-12034"/>
                         <outlet property="notesLabel" destination="12033" id="name-outlet-12033"/>
+                        <outlet property="doneNotesButton" destination="12052" id="name-outlet-12052"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12031" userLabel="First Responder" sceneMemberID="firstResponder"/>

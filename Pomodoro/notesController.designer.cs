@@ -16,10 +16,19 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton addNotesButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView listOfAllNotesTable { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (addNotesButton != null) {
+                addNotesButton.Dispose ();
+                addNotesButton = null;
+            }
+
             if (listOfAllNotesTable != null) {
                 listOfAllNotesTable.Dispose ();
                 listOfAllNotesTable = null;
