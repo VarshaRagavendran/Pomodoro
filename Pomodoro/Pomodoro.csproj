@@ -158,6 +158,8 @@
     <Compile Include="Controllers\ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseServices\NotesService.cs" />
+    <Compile Include="DatabaseServices\NotesItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />
