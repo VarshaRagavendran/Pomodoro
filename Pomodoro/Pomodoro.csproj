@@ -81,6 +81,31 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\packages\PInvoke.Kernel32.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\packages\PInvoke.BCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\packages\PInvoke.NCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\packages\Validation.2.2.8\lib\dotnet\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\packages\PCLCrypto.2.0.147\lib\xamarinios10\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Client">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Client.4.0.2\lib\xamarinios10\Microsoft.Azure.Mobile.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -88,6 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="DatabaseServices\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -96,37 +123,40 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="DatabaseServices\TaskItem.cs" />
+    <Compile Include="DatabaseServices\TaskService.cs" />
+    <Compile Include="Controllers\enterNotesController.cs" />
+    <Compile Include="Controllers\enterNotesController.designer.cs">
+      <DependentUpon>enterNotesController.cs</DependentUpon>
     </Compile>
-    <Compile Include="timerController.cs" />
-    <Compile Include="timerController.designer.cs">
-      <DependentUpon>timerController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainPageController.cs" />
-    <Compile Include="mainPageController.designer.cs">
+    <Compile Include="Controllers\mainPageController.cs" />
+    <Compile Include="Controllers\mainPageController.designer.cs">
       <DependentUpon>mainPageController.cs</DependentUpon>
     </Compile>
-    <Compile Include="notesController.cs" />
-    <Compile Include="notesController.designer.cs">
+    <Compile Include="Controllers\notesController.cs" />
+    <Compile Include="Controllers\notesController.designer.cs">
       <DependentUpon>notesController.cs</DependentUpon>
     </Compile>
-    <Compile Include="tasksController.cs" />
-    <Compile Include="tasksController.designer.cs">
-      <DependentUpon>tasksController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="settingsController.cs" />
-    <Compile Include="settingsController.designer.cs">
+    <Compile Include="Controllers\settingsController.cs" />
+    <Compile Include="Controllers\settingsController.designer.cs">
       <DependentUpon>settingsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="enterNotesController.cs" />
-    <Compile Include="enterNotesController.designer.cs">
-      <DependentUpon>enterNotesController.cs</DependentUpon>
+    <Compile Include="Controllers\tasksController.cs" />
+    <Compile Include="Controllers\tasksController.designer.cs">
+      <DependentUpon>tasksController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\timerController.cs" />
+    <Compile Include="Controllers\timerController.designer.cs">
+      <DependentUpon>timerController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ViewController.cs" />
+    <Compile Include="Controllers\ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
