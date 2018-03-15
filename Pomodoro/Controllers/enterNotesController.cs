@@ -58,22 +58,31 @@ namespace Pomodoro
                 }
                 else
                 {
-                    // note already exists and has to be updated in azure
-                    for (int i = 0; i < notesService.Items.Count; i++)
-                    {
-                        if ((notesService.Items[i].Id).Equals(note.Id))
-                        {
-                            notesService.Items[i].Text = notesTextArea.Text;
-                            note.Text = notesTextArea.Text;
-                            await notesService.UpdateNoteAsync(note);
-                            break;
-                        }
-                    }
+                    // note already exists and has to be updated in azure               
+                    note.Text = notesTextArea.Text;
+                    await notesService.UpdateNoteAsync(note);
                     isInEditingMode = false;
                 }
 
                 notesTextArea.Text = "";
+                await notesService.RefreshDataAsync();
             };
+        }
+
+        /**
+         * Refreshing notes table in notes controller
+         */
+        public override  void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            if (segue.Identifier == "doneSegue")
+            { 
+                var notesCtrl = segue.DestinationViewController as notesController;
+                if (notesCtrl != null)
+                {
+                    // refreshing table before view displays
+                     notesCtrl.RefreshAsync();
+                }
+            }
         }
     }
 }

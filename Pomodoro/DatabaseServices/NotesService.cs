@@ -133,6 +133,13 @@ namespace Pomodoro
          */
         public async Task UpdateNoteAsync(NotesItem notesItem)
         {
+            for (int i = 0; i < Items.Count; i++)
+            {
+                if ((Items[i].Id).Equals(notesItem.Id))
+                {
+                    Items[i].Text = notesItem.Text;
+                }
+            }
             await notesTable.UpdateAsync(notesItem);
         }
 

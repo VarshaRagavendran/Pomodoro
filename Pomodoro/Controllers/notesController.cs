@@ -28,19 +28,20 @@ namespace Pomodoro
         public override async void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+            // register tableOfNotes tableview component
+            listOfAllNotesTable.RegisterClassForCellReuse(typeof(UITableViewCell), notesHistoryCellId);
+            listOfAllNotesTable.Source = new NotesHistoryDataSource(this);
             notesService = NotesService.DefaultService;
             await notesService.InitializeStoreAsync();
             // pull the latest data
             await RefreshAsync();
-            // register tableOfNotes tableview component
-            listOfAllNotesTable.RegisterClassForCellReuse(typeof(UITableViewCell), notesHistoryCellId);
-            listOfAllNotesTable.Source = new NotesHistoryDataSource(this);
+           
         }
 
         /**
          * Refreshes entries in the list view by querying the local notes table
          */
-        private async Task RefreshAsync()
+        public async Task RefreshAsync()
         {
             await notesService.RefreshDataAsync();
             listOfAllNotesTable.ReloadData();
@@ -68,7 +69,10 @@ namespace Pomodoro
         */
         class NotesHistoryDataSource : UITableViewSource
         {
+            private int numberOfCharactersToBeDisplayed = 30;
+
             notesController controller;
+
             public NotesHistoryDataSource(notesController controller)
             {
                 this.controller = controller;
@@ -93,12 +97,12 @@ namespace Pomodoro
                 var cell = tableView.DequeueReusableCell(notesController.notesHistoryCellId);
                 int row = indexPath.Row;
                 string itemText = controller.notesService.Items[indexPath.Row].Text;
-                if (itemText.Length < 20)
+                if (itemText.Length < numberOfCharactersToBeDisplayed)
                     cell.TextLabel.Text = itemText;
                 else
                 {
                     StringBuilder sb = new StringBuilder();
-                    sb.Append(itemText.Substring(0, 20));
+                    sb.Append(itemText.Substring(0, numberOfCharactersToBeDisplayed));
                     sb.Append("...");
                     cell.TextLabel.Text = sb.ToString();
                 }
