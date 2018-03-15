@@ -16,6 +16,10 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel listOfTasks { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton startButton { get; set; }
 
         [Outlet]
@@ -32,6 +36,11 @@ namespace Pomodoro
 
         void ReleaseDesignerOutlets ()
         {
+            if (listOfTasks != null) {
+                listOfTasks.Dispose ();
+                listOfTasks = null;
+            }
+
             if (startButton != null) {
                 startButton.Dispose ();
                 startButton = null;
