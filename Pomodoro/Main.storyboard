@@ -271,6 +271,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue id="15134" destination="12029" kind="show" identifier="notesEditor"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

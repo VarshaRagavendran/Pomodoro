@@ -15,33 +15,53 @@ namespace Pomodoro
         public notesController(IntPtr handle) : base(handle)
         { }
 
+        /**
+         * Unwinding when home button is clicked
+         */
         [Action("UnwindToNotesController:")]
         public void UnwindToNotesController(UIStoryboardSegue segue)
         { }
 
+        /**
+         * Refreshing data / loading data before storyboard appears
+         */
         public override async void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
             notesService = NotesService.DefaultService;
             await notesService.InitializeStoreAsync();
+            // pull the latest data
             await RefreshAsync();
-        }
-
-        public override void ViewDidLoad()
-        {
-            base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
             // register tableOfNotes tableview component
             listOfAllNotesTable.RegisterClassForCellReuse(typeof(UITableViewCell), notesHistoryCellId);
             listOfAllNotesTable.Source = new NotesHistoryDataSource(this);
         }
 
+        /**
+         * Refreshes entries in the list view by querying the local notes table
+         */
         private async Task RefreshAsync()
         {
             await notesService.RefreshDataAsync();
             listOfAllNotesTable.ReloadData();
         }
 
+        /**
+         * Sending selected NotesItem to EnterNotescontroller for editing
+         */
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            if (segue.Identifier == "notesEditor")
+            { // set in Storyboard
+                NSIndexPath indexPath = (NSIndexPath)sender;
+                var enterNotesCtrl = segue.DestinationViewController as enterNotesController;
+                if (enterNotesCtrl != null)
+                {
+                    enterNotesCtrl.note = notesService.Items[indexPath.Row];
+                }
+            }
+
+        }
 
         /**
         * Loading notes data into table view and methods that can be performed
@@ -73,16 +93,16 @@ namespace Pomodoro
                 var cell = tableView.DequeueReusableCell(notesController.notesHistoryCellId);
                 int row = indexPath.Row;
                 string itemText = controller.notesService.Items[indexPath.Row].Text;
-                if (itemText.Length < 10)
+                if (itemText.Length < 20)
                     cell.TextLabel.Text = itemText;
                 else
                 {
                     StringBuilder sb = new StringBuilder();
-                    sb.Append(itemText.Substring(0, 10));
+                    sb.Append(itemText.Substring(0, 20));
                     sb.Append("...");
                     cell.TextLabel.Text = sb.ToString();
                 }
-                    
+
                 return cell;
             }
 
@@ -115,8 +135,10 @@ namespace Pomodoro
                 tableView.DeleteRows(new[] { indexPath }, UITableViewRowAnimation.Top);
             }
 
-
-
+            public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+            {
+                controller.PerformSegue("notesEditor", indexPath); // pass indexPath as sender
+            }
             #endregion
         }
 

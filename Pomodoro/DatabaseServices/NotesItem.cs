@@ -12,6 +12,11 @@ namespace Pomodoro
 
         [JsonProperty(PropertyName = "delete")]
         public bool Delete { get; set; }
+
+        public static implicit operator string(NotesItem v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

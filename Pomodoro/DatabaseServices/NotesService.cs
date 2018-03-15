@@ -82,6 +82,10 @@ namespace Pomodoro
 #endif
         }
 
+        /**
+         * Refreshes the entries in the list view by querying the local notes table.
+         * Excludes Deleted items
+         */
         public async Task<List<NotesItem>> RefreshDataAsync()
         {
             try
@@ -90,11 +94,8 @@ namespace Pomodoro
                 // Update the local store
                 await SyncAsync(pullData: true);
 #endif
-
-                // This code refreshes the entries in the list view by querying the local TodoItems table.
-                // The query excludes completed TodoItems
                 Items = await notesTable
-                        .Where(notesItem => notesItem.Delete == false).ToListAsync();
+        .Where(notesItem => notesItem.Delete == false).ToListAsync();
 
             }
             catch (MobileServiceInvalidOperationException e)
@@ -106,11 +107,14 @@ namespace Pomodoro
             return Items;
         }
 
+        /**
+         * Inserts a new note item into azure
+         */
         public async Task InsertTodoItemAsync(NotesItem notesItem)
         {
             try
             {
-                await notesTable.InsertAsync(notesItem); // Insert a new TodoItem into the local database.
+                await notesTable.InsertAsync(notesItem);
 #if OFFLINE_SYNC_ENABLED
                 await SyncAsync(); // Send changes to the mobile app backend.
 #endif
@@ -124,12 +128,23 @@ namespace Pomodoro
             }
         }
 
+        /**
+         * Updates an existing note item in azure
+         */
+        public async Task UpdateNoteAsync(NotesItem notesItem)
+        {
+            await notesTable.UpdateAsync(notesItem);
+        }
+
+        /**
+         * Deleting an existing note item in azure
+         */
         public async Task CompleteItemAsync(NotesItem item)
         {
             try
             {
                 item.Delete = true;
-                await notesTable.UpdateAsync(item); // Update todo item in the local database
+                await notesTable.UpdateAsync(item);
 #if OFFLINE_SYNC_ENABLED
                 await SyncAsync(); // Send changes to the mobile app backend.
 #endif
