@@ -10,6 +10,8 @@ namespace Pomodoro
     {
         // list of tasks entered by the user
         public List<string> Tasks { get; set; }
+        private List<string> numberList;
+
         static NSString taskHistoryCellID = new NSString("TaskHistoryCell");
 
         private TaskService taskService;
@@ -19,12 +21,30 @@ namespace Pomodoro
             Tasks = new List<string>();
         }
 
-        /**
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+    
+
+		}
+
+		/**
          * Actions to be performed once current view is loaded
          */
-        public override async void ViewDidLoad()
+		public override async void ViewDidLoad()
         {
             base.ViewDidLoad();
+            //firstNumberTime = new UIPickerView();
+            firstNumberTime.Model = new NumberPickerModel();
+
+           // secondNumberTime = new UIPickerView();
+            secondNumberTime.Model = new NumberPickerModel();
+
+           // thirdNumberTime = new UIPickerView();
+            thirdNumberTime.Model = new NumberPickerModel();
+
+            //fourthNumberTime = new UIPickerView();
+            fourthNumberTime.Model = new NumberPickerModel();
             tableOfTasks.RegisterClassForCellReuse(typeof(UITableViewCell), taskHistoryCellID);
             tableOfTasks.Source = new TaskHistoryDataSource(this);
             taskService = TaskService.DefaultService;
@@ -32,10 +52,13 @@ namespace Pomodoro
             await RefreshAsync();
             // Perform any additional setup after loading the view, typically from a nib.
 
+ 
+   
+
             //actions by clicking startButton
             startButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-
+                
             };
 
             //actions by clicking stopButton

@@ -115,6 +115,7 @@
     <Folder Include="Resources\" />
     <Folder Include="DatabaseServices\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Objects\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -160,6 +161,7 @@
     </Compile>
     <Compile Include="DatabaseServices\NotesService.cs" />
     <Compile Include="DatabaseServices\NotesItem.cs" />
+    <Compile Include="Objects\NumberPickerModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />
