@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UIKit;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace Pomodoro
 {
@@ -24,41 +25,36 @@ namespace Pomodoro
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-    
 
-		}
 
-		/**
+        }
+
+        /**
          * Actions to be performed once current view is loaded
          */
-		public override async void ViewDidLoad()
+        public override async void ViewDidLoad()
         {
             base.ViewDidLoad();
-            //firstNumberTime = new UIPickerView();
-            firstNumberTime.Model = new NumberPickerModel();
+            // Perform any additional setup after loading the view, typically from a nib.
+            var hoursNumberModel = new HourPickerModel();
+            hoursSelection.Model = hoursNumberModel;
 
-           // secondNumberTime = new UIPickerView();
-            secondNumberTime.Model = new NumberPickerModel();
+            var minutesNumberModel = new MinuteSecondPickerModel();
+            minutesSelection.Model = minutesNumberModel;
 
-           // thirdNumberTime = new UIPickerView();
-            thirdNumberTime.Model = new NumberPickerModel();
+            var secondsNumberModel = new MinuteSecondPickerModel();
+            secondsSelection.Model = secondsNumberModel;
 
-            //fourthNumberTime = new UIPickerView();
-            fourthNumberTime.Model = new NumberPickerModel();
             tableOfTasks.RegisterClassForCellReuse(typeof(UITableViewCell), taskHistoryCellID);
             tableOfTasks.Source = new TaskHistoryDataSource(this);
             taskService = TaskService.DefaultService;
             await taskService.InitializeStoreAsync();
             await RefreshAsync();
-            // Perform any additional setup after loading the view, typically from a nib.
-
- 
-   
 
             //actions by clicking startButton
             startButton.TouchUpInside += (object sender, EventArgs e) =>
             {
-                
+
             };
 
             //actions by clicking stopButton

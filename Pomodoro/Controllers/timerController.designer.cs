@@ -16,15 +16,11 @@ namespace Pomodoro
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel colonLabel { get; set; }
+        UIKit.UILabel hoursLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView firstNumberTime { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView fourthNumberTime { get; set; }
+        UIKit.UIPickerView hoursSelection { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -32,7 +28,19 @@ namespace Pomodoro
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView secondNumberTime { get; set; }
+        UIKit.UILabel minutesLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIPickerView minutesSelection { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel secondsLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIPickerView secondsSelection { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -46,25 +54,16 @@ namespace Pomodoro
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView tableOfTasks { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView thirdNumberTime { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (colonLabel != null) {
-                colonLabel.Dispose ();
-                colonLabel = null;
+            if (hoursLabel != null) {
+                hoursLabel.Dispose ();
+                hoursLabel = null;
             }
 
-            if (firstNumberTime != null) {
-                firstNumberTime.Dispose ();
-                firstNumberTime = null;
-            }
-
-            if (fourthNumberTime != null) {
-                fourthNumberTime.Dispose ();
-                fourthNumberTime = null;
+            if (hoursSelection != null) {
+                hoursSelection.Dispose ();
+                hoursSelection = null;
             }
 
             if (listOfTasks != null) {
@@ -72,9 +71,24 @@ namespace Pomodoro
                 listOfTasks = null;
             }
 
-            if (secondNumberTime != null) {
-                secondNumberTime.Dispose ();
-                secondNumberTime = null;
+            if (minutesLabel != null) {
+                minutesLabel.Dispose ();
+                minutesLabel = null;
+            }
+
+            if (minutesSelection != null) {
+                minutesSelection.Dispose ();
+                minutesSelection = null;
+            }
+
+            if (secondsLabel != null) {
+                secondsLabel.Dispose ();
+                secondsLabel = null;
+            }
+
+            if (secondsSelection != null) {
+                secondsSelection.Dispose ();
+                secondsSelection = null;
             }
 
             if (startButton != null) {
@@ -90,11 +104,6 @@ namespace Pomodoro
             if (tableOfTasks != null) {
                 tableOfTasks.Dispose ();
                 tableOfTasks = null;
-            }
-
-            if (thirdNumberTime != null) {
-                thirdNumberTime.Dispose ();
-                thirdNumberTime = null;
             }
         }
     }

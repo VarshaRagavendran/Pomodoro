@@ -3,17 +3,18 @@ using UIKit;
 using Foundation;
 using System;
 
-public class NumberPickerModel : UIPickerViewModel
+public class MinuteSecondPickerModel : UIPickerViewModel
 {
     static int[] numberList;
-    protected int selectedIndex = 0;
     public EventHandler ValueChanged;
     public int SelectedValue;
 
-    public NumberPickerModel()
+    public MinuteSecondPickerModel()
     {
-        numberList = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
+        numberList = new int[60];
+        for (int i = 0; i <= 59; i++){
+            numberList[i] = i;
+        }
     }
 
     public override nint GetRowsInComponent(UIPickerView pickerView, nint component)

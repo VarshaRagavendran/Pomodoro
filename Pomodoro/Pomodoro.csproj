@@ -161,7 +161,8 @@
     </Compile>
     <Compile Include="DatabaseServices\NotesService.cs" />
     <Compile Include="DatabaseServices\NotesItem.cs" />
-    <Compile Include="Objects\NumberPickerModel.cs" />
+    <Compile Include="Objects\MinuteSecondPickerModel.cs" />
+    <Compile Include="Objects\HourPickerModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splash3.jpeg" />
