@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UIKit;
 using System.Threading.Tasks;
 using System.Text;
+using System.Timers;
 
 namespace Pomodoro
 {
@@ -11,7 +12,6 @@ namespace Pomodoro
     {
         // list of tasks entered by the user
         public List<string> Tasks { get; set; }
-        private List<string> numberList;
 
         static NSString taskHistoryCellID = new NSString("TaskHistoryCell");
 
@@ -25,8 +25,6 @@ namespace Pomodoro
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-
         }
 
         /**
@@ -54,7 +52,46 @@ namespace Pomodoro
             //actions by clicking startButton
             startButton.TouchUpInside += (object sender, EventArgs e) =>
             {
+                Console.WriteLine("hours: " + hoursNumberModel.SelectedValue);
+                Console.WriteLine("minutes: " + minutesNumberModel.SelectedValue);
+                Console.WriteLine("seconds: " + secondsNumberModel.SelectedValue);
 
+                //1 Hour = 3,600,000 Milliseconds
+                int hoursToMilliseconds = 0;
+                if (hoursNumberModel.SelectedValue != 0)
+                {
+                    hoursToMilliseconds = hoursNumberModel.SelectedValue * 3600000;
+                }
+                // 1 minute = 60000 ms
+                int minutesToMilliseconds = 0;
+                if (minutesNumberModel.SelectedValue != 0)
+                {
+                    minutesToMilliseconds = minutesNumberModel.SelectedValue * 60000;
+                }
+                // 1 second =  1000 ms
+                int secondsToMilliseconds = 0;
+                if (secondsNumberModel.SelectedValue != 0)
+                {
+                    secondsToMilliseconds = secondsNumberModel.SelectedValue * 1000;
+                }
+                // 2. add to hours
+                int totalMS = hoursToMilliseconds + minutesToMilliseconds + secondsToMilliseconds;
+                // 3. convert hours to milliseconds
+                if (totalMS == 0)
+                {
+                    var alert = UIAlertController.Create("Invalid Timer!", "Please select again.", UIAlertControllerStyle.Alert);
+                    alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+                    PresentViewController(alert, true, null);
+                }
+                else
+                {
+                    // Timer
+                    System.Timers.Timer t = new System.Timers.Timer(totalMS);
+                    Console.WriteLine("milliseconds" + totalMS);
+                    t.Elapsed += MyTimer_Elapsed;
+                    t.Start();
+                    Console.ReadLine();
+                }
             };
 
             //actions by clicking stopButton
@@ -64,6 +101,12 @@ namespace Pomodoro
 
             };
 
+        }
+
+        private void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Elapsed: {0:HH:mm:ss.fff}", e.SignalTime);
         }
 
         private async Task RefreshAsync()
