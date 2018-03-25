@@ -12,6 +12,7 @@ namespace Pomodoro
     {
         // list of tasks entered by the user
         public List<string> Tasks { get; set; }
+        private System.Timers.Timer timer;
 
         static NSString taskHistoryCellID = new NSString("TaskHistoryCell");
 
@@ -86,10 +87,10 @@ namespace Pomodoro
                 else
                 {
                     // Timer
-                    System.Timers.Timer t = new System.Timers.Timer(totalMS);
+                    timer = new System.Timers.Timer(totalMS);
                     Console.WriteLine("milliseconds" + totalMS);
-                    t.Elapsed += MyTimer_Elapsed;
-                    t.Start();
+                    timer.Elapsed += MyTimer_Elapsed;
+                    timer.Start();
                     Console.ReadLine();
                 }
             };
@@ -97,16 +98,19 @@ namespace Pomodoro
             //actions by clicking stopButton
             stopButton.TouchUpInside += (object send, EventArgs e) =>
             {
-
-
+                timer.Elapsed -= MyTimer_Elapsed;
             };
 
         }
-
+        /**
+         * When timer has hit the time set by user
+         */
         private void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Elapsed: {0:HH:mm:ss.fff}", e.SignalTime);
+            //remove timer
+            timer.Elapsed -= MyTimer_Elapsed;
         }
 
         private async Task RefreshAsync()

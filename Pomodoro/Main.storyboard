@@ -94,6 +94,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
                                 </state>
+                                <connections>
+                                    <segue id="17441" destination="16549" kind="show" identifier="countdownSegue"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1159" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
                                 <rect key="frame" x="228" y="297" width="189" height="90"/>
@@ -518,6 +521,24 @@
                 <exit id="12032" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1609" y="-53"/>
+        </scene>
+        <scene sceneID="16548">
+            <objects>
+                <viewController id="16549" sceneMemberID="viewController" customClass="timerCountdownController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="16546"/>
+                        <viewControllerLayoutGuide type="bottom" id="16547"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="16550">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16551" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1729" y="-904"/>
         </scene>
     </scenes>
     <resources>
