@@ -120,6 +120,21 @@ namespace Pomodoro
             tableOfTasks.ReloadData();
         }
 
+        /**
+        * 
+        */
+       /* public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            if (segue.Identifier == "countdownSegue")
+            {
+                var timerCountDownCtrl = segue.DestinationViewController as timerCountdownController;
+                if (timerCountDownCtrl != null)
+                {
+                    timerCountDownCtrl.timer = timer;
+                }
+            }
+        }*/
+
         class TaskHistoryDataSource : UITableViewSource
         {
             timerController controller;

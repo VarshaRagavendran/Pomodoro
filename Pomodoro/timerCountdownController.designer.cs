@@ -14,5 +14,8 @@ namespace Pomodoro
     [Register ("timerCountdownController")]
     partial class timerCountdownController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }
